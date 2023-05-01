@@ -24,14 +24,13 @@ class WeatherRetriever:
             visibility = json["visibility"]
             wind_speed = json["wind"]["speed"]
             wind_direction = json["wind"]["deg"]
-            rain = json["rain"]["1h"]
             cloud_cover = json["clouds"]
-            country_code = json["sys"]["country"]
             location_name = json["name"]
+            description = json["weather"][0]["description"]
         except KeyError:
             raise MyInfoAccessError("Requested data is not accessible")
         return WeatherInformation(temp, temp_feel, humidity, visibility, wind_speed,
-                                  wind_direction, rain, cloud_cover, country_code, location_name)
+                                  wind_direction, cloud_cover, location_name, description)
 
     @staticmethod
     def api_caller(latitude: float, longitude: float) -> dir:

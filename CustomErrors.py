@@ -3,5 +3,6 @@
 class MyAPIError(Exception):
     pass
 
+
 class MyInfoAccessError(Exception):
     pass
