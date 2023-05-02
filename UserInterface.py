@@ -38,7 +38,7 @@ class UserInterface:
     # Opening statement
     @staticmethod
     def say_welcome():
-        print("Welcome the this weather program that is made by Carl 2023")
+        print("\nWelcome the this weather program that is made by Carl 2023")
         print("You will be able to see weather information for almost any location on the globe")
         print("Hope you will  enjoy the experience ;)\n")
 
