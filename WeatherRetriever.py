@@ -27,11 +27,11 @@ class WeatherRetriever:
             cloud_cover = json["clouds"]["all"]
             location_name = json["name"]
             description = json["weather"][0]["description"]
-            if location_name == "":
+            if location_name == "" or location_name == "Globe":
                 location_name = "unnamed location"
             return WeatherInformation(temp, temp_feel, humidity, visibility, wind_speed,
                                       wind_direction, cloud_cover, location_name, description)
-        except KeyError:
+        except KeyError:   # This error occurs when the json do not contain the requested key
             raise MyInfoAccessError("Requested data is not accessible")
 
     # A method responsible for making the API call that retrieves the current weather data

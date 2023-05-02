@@ -28,11 +28,28 @@ class UserInterface:
     # Presents weather data to the user in a readable way
     @staticmethod
     def present_weather(weather: WeatherInformation):
-        print("Right now the weather in " + weather.get_location_name() + " is believed to be " + weather.get_description())
+        print("\nRight now the weather in " + weather.get_location_name() + " is believed to be " + weather.get_description())
         print("The temperature is " + str(weather.get_temp()) + "°C (feels like " + str(weather.get_temp_feel()) + " °C)")
         print("The wind speed is " + str(weather.get_wind_speed()) + "m/s from a direction of " + str(weather.get_wind_direction()) + "°")
         print("The air humidity is " + str(weather.get_humidity()) + "%")
         print("The cloud cover is " + str(weather.get_cloud_cover()) + "%")
         print("The visibility is " + str(weather.get_visibility()) + " meters")
 
+    # Opening statement
+    @staticmethod
+    def say_welcome():
+        print("Welcome the this weather program that is made by Carl 2023")
+        print("You will be able to see weather information for almost any location on the globe")
+        print("Hope you will  enjoy the experience ;)\n")
+
+    @staticmethod
+    def user_wants_to(question: str) -> bool:
+        print("\n" + question)
+        while True:
+            user_input = input("Enter \"y\" for yes and \"n\" for no: ")
+            if user_input == "y":
+                return True
+            elif user_input == "n":
+                return False
+            print("invalid response, please try again\n")
 
