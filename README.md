@@ -11,7 +11,7 @@ In order to run this weather application you will have to do the following:
 4. Make sure you are connected to the internet
 
 5. Run the program (can be done multiple ways but here is two of them)
-   1. Open the project folder (where you put the clone) in a Pyhton compatible IDE and run the 
+   1. Open the project folder (where you put the clone) in a Python compatible IDE and run the 
    main function in the Main.py file.
    2. Navigate to the project folder (CaseMay2023) with the terminal and enter "python Main.py"
 
