@@ -6,7 +6,8 @@ In order to run this weather application you will have to do the following:
 2. Make sure you have installed the latest version of Python 3 (at least updated the last year)
 
 3. Make sure you have downloaded Python´s "requests" package.
-   * Can be done by opening your IDE of choice and go to the missing dependency and download it
+   * Can be done by opening your IDE of choice and go to the missing dependency and download, It 
+   is located in the WeatherRetriever.py file, the IDE will give you options of how to download
 
 4. Make sure you are connected to the internet
 
