@@ -42,6 +42,7 @@ class UserInterface:
         print("You will be able to see weather information for almost any location on the globe")
         print("Hope you will  enjoy the experience ;)\n")
 
+    # Lets the user answer yes or no to a question in a safe way
     @staticmethod
     def user_wants_to(question: str) -> bool:
         print("\n" + question)
