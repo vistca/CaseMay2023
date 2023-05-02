@@ -24,7 +24,7 @@ class WeatherInformation:
         self._wind_direction = wind_direction
         self._cloud_cover = cloud_cover
         self._location_name = location_name
-        self.description = description
+        self._description = description
 
     # The attributes should only be accessed by its respective getter method
     def get_temp(self): return self._temp
@@ -35,5 +35,5 @@ class WeatherInformation:
     def get_wind_direction(self): return self._wind_direction
     def get_cloud_cover(self): return self._cloud_cover
     def get_location_name(self): return self._location_name
-    def get_description(self): return self.description
+    def get_description(self): return self._description
 

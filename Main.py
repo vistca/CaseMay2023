@@ -1,10 +1,23 @@
 from WeatherRetriever import WeatherRetriever
+from UserInterface import UserInterface
+
+
+def program():
+    cords = UserInterface.get_cords()
+    weather_data = WeatherRetriever.get_current_weather(cords.latitude(), cords.longitude())
+    UserInterface.present_weather(weather_data)
+
 
 if __name__ == '__main__':
-    print("test")
-    data = WeatherRetriever.get_current_weather(29, 120)
-    print(data.get_location_name())
-    print(data.get_temp())
-    print(data.get_description())
+    program()
 
+
+'''
+try:
+
+except MyAPIError as e:
+    raise e
+except MyInfoAccessError as e:
+    raise e
+'''
 

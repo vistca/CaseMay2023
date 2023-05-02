@@ -1,0 +1,38 @@
+
+# This class provides functionality for the user interface (communication with the terminal)
+from WeatherInformation import WeatherInformation
+from MyCords import MyCords
+
+
+class UserInterface:
+
+    # Requests coordinates from the user
+    @staticmethod
+    def get_cords() -> MyCords:
+        print("You have to choose a location by entering its coordinates.")
+        print("Write the decimals after the \".\" sign and not after \",\" \n")
+        while True:
+            user_lat = input("Please enter the latitude: ")
+            user_lng = input("Please enter the longitude: ")
+            try:
+                lat = float(user_lat)
+                lng = float(user_lng)
+                if -90 < lat > 90 or -180 < lng > 180:
+                    raise ValueError
+            except ValueError:
+                print("Invalid value for the coordinates")
+                print("Please try again \n")
+                continue
+            return MyCords(lat, lng)
+
+    # Presents weather data to the user in a readable way
+    @staticmethod
+    def present_weather(weather: WeatherInformation):
+        print("Right now the weather in " + weather.get_location_name() + " is believed to be " + weather.get_description())
+        print("The temperature is " + str(weather.get_temp()) + "°C (feels like " + str(weather.get_temp_feel()) + " °C)")
+        print("The wind speed is " + str(weather.get_wind_speed()) + "m/s from a direction of " + str(weather.get_wind_direction()) + "°")
+        print("The air humidity is " + str(weather.get_humidity()) + "%")
+        print("The cloud cover is " + str(weather.get_cloud_cover()) + "%")
+        print("The visibility is " + str(weather.get_visibility()) + " meters")
+
+
